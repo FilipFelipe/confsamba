@@ -1,5 +1,6 @@
+clear
 echo "iniciando"
-yum install figlet
+yum install -y figlet
 clear
 figlet Samba - IFSP
 echo -e "Clique em Qualquer tecla para continuar..."
@@ -62,9 +63,6 @@ echo "atribuindo senha financeiro_controle"
 smbpasswd -a financeiro_controle
 clear
 echo "configuração do samba finalizada !!!"
-read op
-echo "Deseja reiniciar o samba ?"
-
 sleep 2
 echo "reinciando o samba"
 systemctl stop smb

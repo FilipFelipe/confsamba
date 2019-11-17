@@ -1,11 +1,12 @@
 echo "iniciando"
 yum install figlet
+clear
 figlet Samba - IFSP
-echo -e "Clique em \e[1;33Qualquer\e[0m tecla para continuar..."
+echo -e "Clique em Qualquer tecla para continuar..."
 read -n 1
 echo "instalando samba"
 #instalando samba
-yum install samba samba-client samba-doc samba-swat
+yum install -y samba 
 clear 
 
 
@@ -71,3 +72,5 @@ systemctl start smb
 sleep 1
 echo "finalizado"
 systemctl status smb
+sleep 5 
+testparm
